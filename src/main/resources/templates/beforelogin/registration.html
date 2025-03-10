@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - KucikaBank</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div layout:fragment="loginContent">
+        <form name="registration" th:action="@{/registration/reg}" th:object="${user}" method="post" class="form-signin">
+            <h2 class="form-signin-heading">Please register</h2>
+            <input type="text" id="fullName" name="fullName" th:field="*{fullName}" class="form-control" placeholder="Full name" />
+            <input type="text" id="email" name="email" th:field="*{email}" class="form-control" placeholder="E-mail address" />
+            <input type="password" id="password" name="password" th:field="*{password}" class="form-control" placeholder="Password" />
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+            <div th:if="${errorMessage}" class="error-message" th:text="${errorMessage}"></div>
+        </form>
+    </div>
+    <a href="/">Back</a>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Account</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        select, button {
+            padding: 8px;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Create Account</h1>
+    <form action="/billregistration/createaccount" method="post">
+    	<div th:if="${errorMessage}" class="error-message" th:text="${errorMessage}"></div>
+    	
+        <select name="currency" required>
+            <option value="" disabled selected>Select currency</option>
+            <option th:each="currency : ${currencies}" th:value="${currency}" th:text="${currency}"></option>
+        </select>
+        <br>
+        <button type="submit" name="submit">Submit</button>
+    </form>
+    <a href="/index">Back</a>
+</body>
+</html>

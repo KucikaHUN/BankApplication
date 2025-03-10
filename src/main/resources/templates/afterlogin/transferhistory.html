@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            display: flex;
+            gap: 20px;
+            max-width: 800px;
+            width: 100%;
+        }
+        .column {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background: #f9f9f9;
+        }
+        .column h2 {
+            text-align: center;
+        }
+        .transaction {
+            padding: 8px;
+            margin: 5px 0;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <div class="column" id="sent-transactions">
+            <h2>Send Transactions</h2>
+            <article th:each="sender : ${senderList}" class="transaction">
+                <div><strong>Sender:</strong> <span th:text="${sender.sender.billNumber}"></span></div>
+                <div><strong>Receiver:</strong> <span th:text="${sender.receiver.billNumber}"></span></div>
+                <div><strong>Amount:</strong> <span th:text="${sender.sendAmount}"></span></div>
+                <div><strong>Currency:</strong> <span th:text="${sender.sender.currency}"></span></div>
+                <hr />
+            </article>
+        </div>
+
+        
+        <div class="column" id="received-transactions">
+            <h2>Received Transactions</h2>
+            <article th:each="receiver : ${receiverList}" class="transaction">
+                <div><strong>Sender:</strong> <span th:text="${receiver.sender.billNumber}"></span></div>
+                <div><strong>Receiver:</strong> <span th:text="${receiver.receiver.billNumber}"></span></div>
+                <div><strong>Amount:</strong> <span th:text="${receiver.receiveAmount}"></span></div>
+                <div><strong>Currency:</strong> <span th:text="${receiver.receiver.currency}"></span></div>
+                <hr />
+            </article>
+        </div>
+    </div>
+    <a href="/index">Back</a>
+</body>
+</html>

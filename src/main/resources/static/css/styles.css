@@ -1,0 +1,92 @@
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background: linear-gradient(to right, #007BFF, #0056b3);
+    color: white;
+    padding: 20px;
+    font-size: 24px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+main {
+    margin: 20px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    margin: 20px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+input {
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+button {
+    margin-top: 10px;
+    padding: 12px;
+    background: linear-gradient(to right, #007BFF, #0056b3);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+button:hover {
+    background: linear-gradient(to right, #0056b3, #003d80);
+}
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background: linear-gradient(to right, #007BFF, #0056b3);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+.btn:hover {
+    background: linear-gradient(to right, #0056b3, #003d80);
+}
+.account-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+.account {
+    background: white;
+    padding: 20px;
+    width: 350px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+.account p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+.account a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.account a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+

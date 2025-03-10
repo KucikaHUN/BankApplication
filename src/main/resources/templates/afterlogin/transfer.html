@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <h2>Transfer</h2>
+    <form th:action="@{/transfer/maketransfer}" method="post">
+    	<div th:if="${errorMessage}" class="error-message" th:text="${errorMessage}"></div>
+        <label>Sender Bill Number:</label>
+        <input type="text" th:value="${sender.billNumber}" name = "senderBillNumber" readonly />
+        <br/>
+        <label>Currency:</label>
+        <input type="text" th:value="${sender.currency}" readonly />
+        <br/>
+        
+        <label>Receiver Bill Number:</label>
+        <input type="text" name="receiverBillNumber" required />
+        <br/>
+        
+        <label>Amount:</label>
+        <input type="number" name="amount" step="0.01" required />
+        <br/>
+        
+        <label>Text:</label>
+        <input type="text" name="text"/>
+        <br/>
+        
+        <button type="submit">Make transfer</button>
+    </form>
+    <a href="/index">Back</a>
+</body>
+</html>

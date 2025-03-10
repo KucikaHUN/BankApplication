@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - KucikaBank</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+	
+	<div layout:fragment="loginContent">
+		
+		<form name="login" th:action="@{/login}" method="post" class="form-signin">
+		<h2 class="form-signin-heading">Login</h2>
+		<div id="err" th:if="${param.error}" class="alert alert-danger">Bad Email or Password</div>
+		<div th:if="${param.logout}" class="alert alert-success">Success logout</div>
+        <label for="username" class="sr-only">Email:</label>
+		<input type="text" id="username" name="username" class="form-control" placeholder="Email" required="true" /> 
+        <label for="password" class="sr-only">Password:</label>
+		<input type="password" id="password" name="password" class="form-control" placeholder="Jelszó" required="true" />
+					<div class="checkbox">
+						<label> <input id="remember-me" name="remember-me" type="checkbox" /> Remember me
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+    </form>
+    <a href="/registration">Register</a>
+    <a href="/">Back</a>
+</body>
+</html>

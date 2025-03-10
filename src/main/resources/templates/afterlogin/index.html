@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - KucikaBank</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome, User</h1>
+        <form th:action="@{/logout}" method="post">
+        <button type="submit">Logout</button>
+        </form>
+    </header>
+    <main>
+        <a href="/billregistration">Create New Account</a>
+        <h2>Your Accounts</h2>
+         <article th:each="account : ${accounts}">
+            <h1 th:text="${account.billNumber}">Bill Number</h1> 
+                <h1 th:text="${account.currency}">Currency</h1> 
+                <h1 th:text="${account.balance}">Balance</h1> 
+                <form th:action="@{/transfer/newtransfer}" method="get">
+    <input type="hidden" name="senderBillNumber" th:value="${account.billNumber}" />
+    <button type="submit">Transfer</button>
+    			</form>
+				<form th:action="@{/transfer/transferhistory}" method="get">
+    <input type="hidden" name="billNumber" th:value="${account.billNumber}" />
+    <button type="submit">Transfer History</button>
+                </form>
+                 </article>
+                
+            </div>
+        </div>
+    </main>
+</body>
+</html>
