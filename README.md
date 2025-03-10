@@ -1,7 +1,7 @@
 Hungary:
 Üdvözlöm kedves kód olvasó!
 
-Az alábbi banki alkalmazást imitáló alkalmazást Spring Boot keretrendszer segítségével alkottam meg. Az alkalmazás tartalmaz regisztrációs és belépési felületet. 
+Az alábbi banki rendszert imitáló alkalmazást Spring Boot keretrendszer segítségével alkottam meg. Az alkalmazás tartalmaz regisztrációs és belépési felületet. 
 Megkérném, hogy az oldalra való regisztrálásakor a https://temp-mail.org/ weboldal által készített e-mail címet használjon. 
 Erre az e-mail-ra fog jönni a regisztrációt követően egy aktiváló link, melyet megnyitva lehet a fiókot aktiválni. 
 A belépést követően lehetőség van számlákat létre hozni, melynek van kezdő tőkéje (1000) is.
