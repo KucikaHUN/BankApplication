@@ -34,7 +34,7 @@ public class EmailServiceImpl implements EmailService {
 			message.setTo(user.getEmail());
 			message.setSubject("Success register");
 			message.setText("Welcome " + user.getFullName() + "! \n \nThank you, for joining the KucikaBank!\n"
-					+ "Please activate your profile: http://localhost:8080/activation/" + user.getActivationCode());
+					+ "Please activate your profile: https://bankapplication-vuik.onrender.com/activation/" + user.getActivationCode());
 
 			javaMailSender.send(message);
 
