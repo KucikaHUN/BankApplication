@@ -8,7 +8,7 @@ A belépést követően lehetőség van számlákat létre hozni, melynek van ke
 A számlákról lehet utalni, mely utalásokat meglehet nézni az előzményekben.
 Illetve megjegyezném, hogy a kód HTML és CSS részét nem én alkottam, azokhoz még nem értek.
 
-Amennyiben hibát tapasztalna, vagy lenne javaslata a kódhoz, akkor a kucikahun123@gmail.com e-mail címre várom szívesen a leveleket.
+Amennyiben hibát tapasztalna, vagy lenne javaslata a kódhoz, akkor a blinszkiszilard2001@gmail.com e-mail címre várom szívesen a leveleket.
 A kód egy weboldalon üzemel, melyre első körben várni kell körülbelül egy percet a megnyitás után, mivel ingyenes weboldalt használok: https://bankapplication-vuik.onrender.com/
 
 English: 
@@ -21,5 +21,5 @@ After logging in, it is possible to create accounts, which also have a starting 
 You can transfer money from the accounts, which transfers can be viewed in the history.
 I would also like to note that I did not create the HTML and CSS parts of the code, I am not familiar with them yet.
 
-If you encounter an error or have any suggestions for the code, I am happy to receive emails at the email address kucikahun123@gmail.com.
+If you encounter an error or have any suggestions for the code, I am happy to receive emails at the email address blinszkiszilard2001@gmail.com.
 The code runs on a website, which initially requires a wait of about a minute after opening, as I am using a free website: https://bankapplication-vuik.onrender.com/
