@@ -33,7 +33,7 @@ public class EmailServiceImpl implements EmailService {
 			message.setFrom(MESSAGE_FROM);
 			message.setTo(user.getEmail());
 			message.setSubject("Success register");
-			message.setText("Welcome " + user.getFullName() + "! \n \nThank you, for joining the KucikaBank!\n"
+			message.setText("Welcome " + user.getFullName() + "! \n \nThank you, for joining to the Bank!\n"
 					+ "Please activate your profile: https://bankapplication-vuik.onrender.com/activation/" + user.getActivationCode());
 
 			javaMailSender.send(message);
